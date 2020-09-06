@@ -47,8 +47,9 @@ fs.readFile('abc.txt','utf8',(err,data)=>{
       return
    }
    console.log(outputa);
-   res.write("<html><meta http=equiv='refresh' content='5; url=/result'>");//refreshing page every 5 seconds
+   res.write("<html><meta http=equiv='refresh' content='5; url=/result'><body>");//refreshing page every 5 seconds
    res.write(outputa);
+   res.write("<br><br><h1><a href='/'>click here to go back</a></h1>")
    //res.write(data); this is for reading data from file
    res.end();
 })
