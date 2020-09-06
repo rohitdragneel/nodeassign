@@ -11,7 +11,7 @@ app.get('/', function (req, res) {
     res.write('<html><body>');
     res.write("Enter URL<br>");
     res.write("<form action='/search' method='POST'>");
-    res.write('<input type="text" name="geturl" required><br>');
+    res.write('<input type="url" name="geturl" required><br>');
     res.write('<input type="submit" name="submit">');
     res.write('</form></body></html>')
     res.end();
