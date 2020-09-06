@@ -34,7 +34,7 @@ app.post('/search',function(req,res){
    
    
   })
-  sleep.sleep(7);
+  sleep.sleep(1);
 // waiting to get data from different source
   res.redirect('/result');
  
