@@ -27,6 +27,7 @@ app.post('/search',function(req,res){
      fs.writeFile('abc.txt',JSON.stringify(results),function(err){
             if(err) throw err;
      })
+     outputa=JSON.stringify(results);
      console.log(results);
     console.log('error:', error); // This is returns true or false. True if there was a error. The error it self is inside the results object.
    // console.log(JSON.stringify(results)); // This contains all of the Open Graph results
@@ -46,7 +47,8 @@ fs.readFile('abc.txt','utf8',(err,data)=>{
       return
    }
    console.log(data);
-   res.write(data);
+   res.write(outputa);
+   //res.write(data); this is for reading data from file
    res.end();
 })
 })
