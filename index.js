@@ -46,7 +46,7 @@ fs.readFile('abc.txt','utf8',(err,data)=>{
       console.error(err);
       return
    }
-   console.log(data);
+   console.log(outputa);
    res.write(outputa);
    //res.write(data); this is for reading data from file
    res.end();
